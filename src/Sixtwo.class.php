@@ -1,14 +1,12 @@
-<?php
-/** 
- * @author  Peng Zeng
- * @version v1.0
- */
+<?php declare(strict_types=1);
+
+namespace Pengzeng;
 
 class Sixtwo{
 
 	private $s = array('0','1','2','3','4','5','6','7','8','9','a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z','A','B','C','D','E','F','G','H','I','J','K','L','M','N','O','P','Q','R','S','T','U','V','W','X','Y','Z');
-	public function int2str($int){
-		if(!$int) return 0;
+	public function int2str(int $int): string{
+		if(!$int) return "";
 		$mod = $int%62;
 		$str = $mod === 0 ? $this->s[0] : $this->s[$mod];
 		while ($int = floor($int/62)) {
@@ -23,7 +21,7 @@ class Sixtwo{
 	}
 
 
-	public function str2int($str){
+	public function str2int(string $str): int{
 		if(!$str) return 0;
 		$str = $str.'';
 		$int = 0;
@@ -39,11 +37,3 @@ class Sixtwo{
 		return $int;
 	}
 }
-
-$fuck = new Sixtwo();
-$number = mt_rand(1,9999999999);
-echo '原数：'.$number.'<br>';
-$str = $fuck->int2str($number);
-echo '字符：'.$str.'<br>';
-$number1 = $fuck->str2int($str);
-echo '还原：'.$number1.'<br>';

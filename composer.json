@@ -1,0 +1,23 @@
+{
+  "name": "pengzeng/sixtwo",
+  "type": "library",
+  "description": "sixtwo",
+  "keywords": ["sixtwo"],
+  "homepage": "https://github.com/pengzeng/sixtwo",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Bruce Peng",
+      "email": "273803750@qq.com",
+      "homepage": "http://php.pzeng.com"
+    }
+  ],
+  "require": {
+    "php": "^5.6.*"
+  },
+  "autoload": {
+    "psr-4": {
+      "pengzeng": "src"
+    }
+  }
+}
